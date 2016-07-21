@@ -2,22 +2,18 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  font-family: 'Helvetica Neun', Helvetica, Arial;
-  font-weight: 400;
 }
 
 html, body{
+  font-family: 'Helvetica Neun', Helvetica, Arial;
+  font-weight: 400;
   margin: 0;
   padding: 0;
   width: 100%;
   height:100%;
 }
 
-img {
-  display: block;
-  max-width: 100%;
-}
-
+/* SIDEBAR*/
 #sidebar {
   position: absolute;
   width:100%;
@@ -25,7 +21,6 @@ img {
   transition: top 0.7s ease-in-out;
   display: block;
   margin-left: 30%;
-
 }
 ul li{
   text-decoration: none;
@@ -33,14 +28,14 @@ ul li{
   box-shadow: 10px 10px 50px 10px #c58f29 inset;
   margin: 0;
   padding:0;
-
+  cursor: pointer;
 }
 #sidebar.visible{
   top: 0;
 
 }
 .sidebar-btn {
-position: absolute;
+  position: absolute;
   margin-top: 25px;
   margin-left: 25px;
   display: inline-block;
@@ -82,25 +77,22 @@ position: absolute;
 
 
 }
+/* BIG CONTAINER*/
 #big-container{
   margin: 0;
   padding: 0;
 }
 
-.about {
-  width: 50%;
-  margin-left: 25%;
-  }
+/*HEADER*/
 .title {
   color: #c58f29;
   text-shadow: 1px 1px #2b6339;
   text-align: center;
 }
 
-.about-text{
-  text-shadow: 1px 1px #2b6339;
-  text-align: left;
-  color: #c58f29;
+img {
+  display: block;
+  max-width: 100%;
 }
 
 header {
@@ -123,19 +115,31 @@ header {
     margin-top: auto;
   }
 
-  #hello {
-    text-align: center;
-    font-size: 48px;
-    color: white;
-    text-shadow: 2px 3px #c58f29;
-    margin-top: auto;
+#hello {
+  text-align: center;
+  font-size: 48px;
+  color: white;
+  text-shadow: 2px 3px #c58f29;
+  margin-top: auto;
   }
 
-  .about-container,
-  .container {
+/*CONTAINER ABOUT*/
+.about {
+  width: 50%;
+  margin-left: 25%;
+  }
+
+.about-text{
+  text-shadow: 1px 1px #2b6339;
+  text-align: left;
+  color: #c58f29;
+}
+
+.about-container,  .container {
     margin-bottom: 4em;
   }
 
+/*CONTAINER FOR CARD*/
 .row{
     display: flex;
     justify-content: space-around;
@@ -148,12 +152,13 @@ header {
     overflow: hidden;
   }
 
-  .col img {
-    transition: all .25s linear;
+.col img {
+  transition: all .25s linear;
+  cursor: pointer;
   }
 
-  .col:hover{
-    opacity: 0.75;
+.col:hover{
+  opacity: 0.75;
   }
 
 .col:hover img {
@@ -161,43 +166,172 @@ header {
 }
 
 .col .text-div {
-    visibility: hidden;
-    text-align: center;
-    opacity: 0;
-    position: absolute;
-    display: block;
-    min-width: 100%;
-    bottom: -50px;
-    left: 50%;
-    transform: translate3d(-50%, 0%, 0);
-    transition: all .25s linear;
-    font-size: 36px;
-    color: white;
-    text-shadow: 2px 3px #2b6339;
+  visibility: hidden;
+  text-align: center;
+  opacity: 0;
+  position: absolute;
+  display: block;
+  min-width: 100%;
+  bottom: -50px;
+  left: 50%;
+  transform: translate3d(-50%, 0%, 0);
+  transition: all .25s linear;
+  font-size: 36px;
+  color: white;
+  text-shadow: 2px 3px #2b6339;
   }
+
   .col:hover .text-div{
     visibility: visible;
     opacity: 1;
     bottom: 20px;
   }
 
+/*container card animals*/
 
-#div-skill {
-transition: all .25s linear;
-width:100%auto;
+.container-card{
+  width: 341px;
+  height: 350px;
+  position: relative;
+  perspective: 800px;
+  }
 
+#card, #card2, #card3 {
+  width: 100%;
+  height:100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transform-origin: center;
+  transition: transform 1s;
 }
 
-.showing{
+#card figure, #card2 figure, #card3 figure {
+  margin: 0;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+#card .back, #card2 .back, #card3 .back{
+  transform: rotateY( 180deg );
+  transition: all .50 linear;
+}
+
+#card.flipped, #card2.flipped, #card3.flipped{
+  transform: rotateY( 180deg );
+  transition: all .50 linear;
+}
+
+/*DIV FOR SLIDER SKILLS*/
+#skill-slider {
+  width: 94%;
   height: 500px;
-  background-color: black;
+  overflow: hidden;
+  border: solid 1px #c3c3c3;
+  margin: 3%;
+  display: none;
+
 }
+
+.list-slides{
+  display: inline-block;
+  width: 100%;
+  max-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#skill-slider .slide{
+  float: left;
+  list-style-type: none;
+  width: 100%;
+  height: 500px;
+  box-shadow: none;
+}
+
+button {
+  position: absolute;
+  height: 70%;
+  color: #c58f29;
+  cursor: pointer;
+  outline: none;
+}
+.next {
+  right:5px;
+
+}
+
+.prev {
+  left: 5px;
+}
+
+
+.slide1, .slide2, .slide3, .slide4, .slide5, .slide6 {background: #741EA1;}
+.sum {background: #9B26AF}
+
+/*CARD*/
+
+
+.image-skill {
+  width: 45%;
+  height: 100%;
+  padding: 3%;
+  margin: 4%;
+  float: left;
+}
+
+.insert{
+  width: 50%;
+  margin-top: 0;
+  padding: 0;
+  margin-left: 15%;
+  padding-bottom: 10%;
+}
+.fa-html5, .fa-css3{
+  color: white;
+  font-size: 260px;
+}
+.level {
+  position: relative;
+  width: 100%;
+  height: 30%
+  padding: 1%;
+  margin-top: 25%;
+  background: deeppink;
+  color: white;
+}
+
+.fa-star {
+padding: 2%;
+color: #68EFAD;
+}
+.title-skill, .h2-skill, .h2-level{
+  text-shadow: none;
+  color: white;
+  font-weight: bold;
+  padding: 2%;
+  margin: 2%;
+}
+.title-skill{
+  text-align: center;
+}
+.sum{
+  height: 100%;
+  float:right;
+  width: 45%;
+}
+
+.slide6 .level{
+  margin-top:5%;
+}
+/* FOOTER*/
 .footer-container {
   font-family: 'Roboto', sans-serif;
   background-color: deeppink;;
   color: white;
   padding: 20px;
-
 }
 
 p {
@@ -225,6 +359,7 @@ p {
 main {
     flex: 1 0 auto;
   }
+
 #back-draw {
   display: none;
 }
