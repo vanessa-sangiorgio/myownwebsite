@@ -5,8 +5,6 @@
       <meta charset="utf-8">
       <link rel="stylesheet" href="font-awesome-4.6.3/css/font-awesome.min.css">
       <link rel="stylesheet" type="text/css" href="css/mystyle.css" >
-      <link href='https://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
-      <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <script src="js/jQuery.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -25,12 +23,12 @@
            <div id= "sidebar">
 
              <ul class="menu">
-               <li class="sidebar-menu"> About Me</li>
-               <li class="sidebar-menu">Curriculum</li>
-               <li class="sidebar-menu">Skills</li>
-               <li class="sidebar-menu">Game</li>
+               <li class="sidebar-menu"><a href="#about"> About Me</a></li>
+               <li class="sidebar-menu"><a target="_blank" href="curriculum/curriculum.html">Curriculum</a></li>
+               <li class="sidebar-menu"><a href="#skill">Skills</a></li>
+               <li class="sidebar-menu"><a target="_blank" href="arcade-game/game.html">Game</a></li>
                <li class="sidebar-menu">Contact Me</li>
-               <li class="sidebar-menu">Follow Me</li>
+               <li class="sidebar-menu"><a href="#footer">Follow Me</a></li>
              </ul>
 
            </div>
@@ -39,14 +37,13 @@
             <h1 id="front-text"> Front-end Web Developer</h1>
          </header>
         <div class="about-container">
-          <div class="about">
-            <h1 class="title"> <hr width="300" align="left" color="#c58f29">&#8936 About me &#8937<hr width="300" align="right" color="#c58f29" ></h1>
-            <p class="about-text">
+          <div class="about" id="about">
+            <h1 class="title"> About me <i class="fa fa-hand-peace-o fa-2x" aria-hidden="true"></i></h1>
+            <article><p class="about-text">
 
               I am a friendly, motivated and enthusiastic junior Front End Web Developer with an acute passion for online business. I have an excellent ability to keep up with the latest trends in web development and design. I am constantly committed to self-improvement and learning new skills. Impressive problem-solving aptitude completes my brilliant profile. I am proficient in working on my own initiative as well as in teams, and I have experience working quickly and under pressure. Thanks my Nanodegree I had the opportunity to  work on real project applying all my IT skiils. And now I've decided to make my own web-site to show to the World what are my abilities. Try to play with every box, each of them is a discovery!
-            </p>
-            <hr width="100%" color="#c58f29">
-            <hr width="100%" color="#c58f29">
+            </p></article>
+
           </div>
         </div>
 
@@ -59,11 +56,11 @@
                   <span class="text-div">Skills</span>
                </div>
                <div class= "col" id="second-col">
-                  <img id="resume" src="image/curriculum.png" alt="Curriculum Vitae image">
+                  <a target="_blank" href="curriculum/curriculum.html"><img id="resume" src="image/curriculum.png" alt="Curriculum Vitae image"></a>
                   <span class="text-div">Curriculum Vitae</span>
                </div>
                <div class= "col" id="third-col">
-                  <img id="game" src="image/game.png" alt="Game image">
+                  <a target="_blank" href="arcade-game/game.html"><img id="game" src="image/game.png" alt="Game image"></a>
                   <span class="text-div">Game</span>
                </div>
 
@@ -179,11 +176,11 @@
 </li>
                   </ul>
             </div>
-            <h1 class="title"> <hr width="300" align="left" color="#c58f29"> &#9824 Give me a try! &#9827<hr width="400" align="right" color="#c58f29" ></h1>
+            <h1 class="title">  &#9824 Give me a try! &#9827</h1>
             <div class= "row" id="second-row">
                <div class= "col" id="first-col">
-                  <img id="portfolio" src="image/portfolio.png" alt="Portfolio image">
-                  <span class="text-div">Portfolio</span>
+                  <a href="curriculum/curriculum.html#projects"><img id="portfolio" src="image/portfolio.png" alt="Portfolio image">
+                  <span class="text-div">Portfolio</span></a>
                </div>
                <div class= "col" id="second-col">
                   <img id="mockup" src="image/mockup_image.png" alt="Mockup image">
@@ -192,9 +189,10 @@
                <div class= "col" id="third-col">
                   <img id="contact" src="image/contactme.png" alt="Contact image">
                   <span class="text-div">Contact me</span>
+
                </div>
             </div>
-            <h1 class="title"> <hr width="300" align="left" color="#c58f29">&#9834 Hobbies &#9834<hr width="300" align="right" color="#c58f29" ></h1>
+            <h1 class="title"> &#9834 Hobbies &#9834</h1>
             <div class= "row" id="container-tr">
 
               <section class= "col container-card">
@@ -225,6 +223,7 @@
 
 <div class= "col" id="third-col">
               <section class= "col container-card">
+
                 <div id="card3">
                <figure class="front">
                   <img id="drawing" src="image/pencil.png" alt="Drawing image">
@@ -241,28 +240,37 @@
       </div>
 
 
-      <footer>
-        <div class="footer-container">
-           <div class="col1-footer">
-              <p>Created by:<br /> Vanessa Sangiorgio</p>
-              <p>© 2016 VANESSA SANGIORGIO ALL RIGHTS RESERVED</p>
+      <footer class="footer-container" id="footer">
 
-           </div>
+           <div class="col1-footer">
+
+             <h2> Contact me: </h2>
+             <ul class="list-footer">
+               <li> <i class="fa fa-skype fa-3x" aria-hidden="true"></i> Cellulare </li>
+               <li><i class="fa fa-envelope fa-3x" aria-hidden="true"></i> E-mail</li>
+               <li><i class="fa fa-sitemap fa-3x" aria-hidden="true"></i>Site Map</li>
+
+             </ul>
+
+                 </div>
+
            <div class="col2-footer">
-             <p>Contact information: <br /><a href="mailto:vanessa.sangiorgio@yahoo.co.uk">
-               vanessa.sangiorgio@yahoo.co.uk</a>.
-             </p>
-            <p> Follow me: </p>
+           <h2> Follow me: </h2>
            <div class="footer-img">
-             <a target="_blank" href="https://twitter.com/VanessaSangi"><img id="twitter" src="image/twitter-logo.png" alt="Twitter image"></a>
-             <a target="_blank" href="https://www.linkedin.com/in/vanessasangiorgio"><img id="linkedin" src="image/linkedin-logo.png" alt="Linkedin image"></a>
-             <a target="_blank" href="https://plus.google.com/u/0/+VanessaSangiorgio1988"><img id="google-plus" src="image/google-logo.png" alt="Linkedin image"></a>
-             <a target="_blank" href="https://www.instagram.com/vane_sng"><img id="instagram" src="image/instagram-logo.png" alt="Linkedin image"></a>
-             <a target="_blank" href="https://github.com/vanessa-sangiorgio"><img id="github" src="image/github-logo.png" alt="Linkedin image"></a>
+
+             <a target="_blank" href="https://twitter.com/VanessaSangi"><i class="fa fa-twitter fa-3x" aria-hidden="true"></i></a>
+             <a target="_blank" href="https://www.linkedin.com/in/vanessasangiorgio"><i class="fa fa-linkedin fa-3x" aria-hidden="true"></i></a>
+             <a target="_blank" href="https://plus.google.com/u/0/+VanessaSangiorgio1988"><i class="fa fa-google-plus fa-3x" aria-hidden="true"></i></a>
+             <a target="_blank" href="https://www.instagram.com/vane_sng"><i class="fa fa-instagram fa-3x" aria-hidden="true"></i></a>
+             <a target="_blank" href="https://github.com/vanessa-sangiorgio"><i class="fa fa-github fa-3x" aria-hidden="true"></i></a>
+             <a href="#big-container"><i class="fa fa-hand-o-up fa-3x" aria-hidden="true"></i><br><br>Back to top </a>
+
+
         </div>
+
         </div>
         <div class="copyright">
-          © 2016 VANESSA SANGIORGIO ALL RIGHTS RESERVED
+           <p>© 2016 VANESSA SANGIORGIO ALL RIGHTS RESERVED</p>
         </div>
       </footer>
    </body>
