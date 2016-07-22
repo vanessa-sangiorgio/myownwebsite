@@ -12,23 +12,36 @@ html, body{
   width: 100%;
   height:100%;
 }
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
+a:active {
+  text-decoration: null;
+  color: inherit;
+}
 /* SIDEBAR*/
 #sidebar {
   position: absolute;
   width:100%;
-  top: -100px;
+  top: -120px;
   transition: top 0.7s ease-in-out;
   display: block;
   margin-left: 30%;
 }
-ul li{
+.menu, .sidebar{
   text-decoration: none;
-  text-shadow: 1px 1px #c58f29;
-  box-shadow: 10px 10px 50px 10px #c58f29 inset;
   margin: 0;
   padding:0;
   cursor: pointer;
+
+}
+.menu > li{
+  font-size: 20px;
+  text-shadow: 1px 2px #691A99;
+  box-shadow: 2px 3px deeppink;
+  margin-left: 1%;
 }
 #sidebar.visible{
   top: 0;
@@ -55,7 +68,7 @@ ul li{
 }
 
 .sidebar-btn > span:nth-child(2){
-  background-color: #c58f29;
+  background-color: deeppink;
 }
 .menu {
   margin-top: 2%;
@@ -63,7 +76,6 @@ ul li{
   width: 100%;
   position: relative;
   list-style: none;
-
 }
 
 .sidebar-menu {
@@ -73,10 +85,8 @@ ul li{
   padding: 1%;
   display: inline-block;
   color: #f7f7f7;
-
-
-
 }
+
 /* BIG CONTAINER*/
 #big-container{
   margin: 0;
@@ -85,8 +95,8 @@ ul li{
 
 /*HEADER*/
 .title {
-  color: #c58f29;
-  text-shadow: 1px 1px #2b6339;
+  color: #691A99;
+  text-shadow: 1px 1px #9B269F;
   text-align: center;
 }
 
@@ -111,7 +121,7 @@ header {
   #front-text {
     text-align: center;
     color: white;
-    text-shadow: 2px 3px #2b6339;
+    text-shadow: 2px 3px #9B269F;
     margin-top: auto;
   }
 
@@ -119,20 +129,27 @@ header {
   text-align: center;
   font-size: 48px;
   color: white;
-  text-shadow: 2px 3px #c58f29;
+  text-shadow: 2px 3px #691A99;
   margin-top: auto;
   }
 
 /*CONTAINER ABOUT*/
+article {
+  -webkit-column-count: 2;
+-moz-column-count: 2;
+column-count: 2;
+}
 .about {
   width: 50%;
   margin-left: 25%;
   }
 
 .about-text{
-  text-shadow: 1px 1px #2b6339;
   text-align: left;
-  color: #c58f29;
+  text-shadow: none;
+  color: #691A99;
+  font-weight: normal;
+  margin-bottom: 1.3em;
 }
 
 .about-container,  .container {
@@ -145,7 +162,7 @@ header {
     justify-content: space-around;
   }
 
-  .col {
+.col {
     transition: all .3s ease-in-out;
     position: relative;
     height: 350px;
@@ -178,7 +195,7 @@ header {
   transition: all .25s linear;
   font-size: 36px;
   color: white;
-  text-shadow: 2px 3px #2b6339;
+  text-shadow: 2px 3px #691A99;
   }
 
   .col:hover .text-div{
@@ -254,7 +271,7 @@ header {
 button {
   position: absolute;
   height: 70%;
-  color: #c58f29;
+  color: deeppink;
   cursor: pointer;
   outline: none;
 }
@@ -304,7 +321,7 @@ button {
 }
 
 .fa-star {
-padding: 2%;
+margin: 2%;
 color: #68EFAD;
 }
 .title-skill, .h2-skill, .h2-level{
@@ -327,39 +344,80 @@ color: #68EFAD;
   margin-top:5%;
 }
 /* FOOTER*/
+footer.footer-container:after {
+    display: table;
+    clear: both;
+    content: '';
+}
+
 .footer-container {
+  width: 100%;
+  height: auto;
   font-family: 'Roboto', sans-serif;
-  background-color: deeppink;;
+  background-color: #9B26AF;
   color: white;
-  padding: 20px;
+
 }
 
 p {
   color:white;
-
   font-size: 18px;
   word-spacing: 15px;
   text-shadow: 1px 1px black;
 }
 .col1-footer, .col2-footer {
-  width: 100%;
-  padding: 7px;
+  width: 50%;
+  box-shadow: null;
+  text-shadow: none;
+float: left;
+padding: 2%;
 }
+.col1-footer {
+
+border-width: 0 0.5px 0 0;
+ border-style: solid;
+ border-color: null white null null;
+}
+.fa-skype, .fa-envelope, .fa-sitemap{
+  color: white;
+  padding: 2%;
+  margin-left: 5%;
+}
+
 .copyright {
-  background-color: rgb(110, 223, 100);
+width: 100%;
+margin: 0;
+display: block;
+float: left;
+background: #691A99;
 }
 
 .footer-img {
   display: flex;
 }
-
-.footer-img a {
-  padding: 20px;
+.footer-img a{
+  padding: 2%;
+  color: white;
 }
+.list-footer{
+  box-shadow: none;
+  text-decoration: none;
+  list-style: none;
+  margin-top: 2%;
+  padding-left: 0;
+  padding-right:0;
+  background: #9B26AF ;
+}
+
 main {
     flex: 1 0 auto;
   }
 
 #back-draw {
   display: none;
+}
+
+.fa-hand-o-up {
+  margin-top: 80%;
+  margin-left: 20%;
 }
