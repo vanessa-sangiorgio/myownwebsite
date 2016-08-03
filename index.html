@@ -3,18 +3,19 @@
    <head>
       <title>Vanessa Sangiorgio CV website</title>
       <meta charset="utf-8">
+
+<link href='https://fonts.googleapis.com/css?family=Amaranth' rel='stylesheet' type='text/css'>
+
       <link rel="stylesheet" href="font-awesome-4.6.3/css/font-awesome.min.css">
       <link rel="stylesheet" type="text/css" href="css/mystyle.css" >
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <script src="js/jQuery.js"></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
- <script src="js/script.js"></script>
+      <!-- <script src="js/jQuery.js"></script> -->
 
    </head>
    <body>
-
       <div id="big-container">
          <header>
+           <div class="header-overlay"></div>
            <div class="sidebar-btn">
                <span></span>
                <span></span>
@@ -23,25 +24,30 @@
            <div id= "sidebar">
 
              <ul class="menu">
-               <li class="sidebar-menu"><a href="#about"> About Me</a></li>
-               <li class="sidebar-menu"><a target="_blank" href="curriculum/curriculum.html">Curriculum</a></li>
-               <li class="sidebar-menu"><a href="#skill">Skills</a></li>
-               <li class="sidebar-menu"><a target="_blank" href="arcade-game/game.html">Game</a></li>
-               <li class="sidebar-menu">Contact Me</li>
-               <li class="sidebar-menu"><a href="#footer">Follow Me</a></li>
+               <li class="sidebar-menu"><a href="#about"><i class="fa fa-venus" aria-hidden="true"></i> About Me</a></li>
+               <li class="sidebar-menu"><a target="_blank" href="curriculum/curriculum.html"><i class="fa fa-sticky-note" aria-hidden="true"></i> Curriculum</a></li>
+               <li class="sidebar-menu"><a href="#skill"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Skills</a></li>
+               <li class="sidebar-menu"><a target="_blank" href="arcade-game/game.html"><i class="fa fa-trophy" aria-hidden="true"></i> Game</a></li>
+               <li class="sidebar-menu"><i class="fa fa-envelope-o" aria-hidden="true"></i> Contact Me</li>
+               <li class="sidebar-menu"><a href="#footer"><i class="fa fa-users" aria-hidden="true"></i> Follow Me</a></li>
              </ul>
 
            </div>
 
-            <span id="hello">Hello World, <br /> <br />It's Vanessa</span>
+            <span id="hello">Hello World,</br> It's Vanessa</span>
             <h1 id="front-text"> Front-end Web Developer</h1>
          </header>
         <div class="about-container">
           <div class="about" id="about">
-            <h1 class="title"> About me <i class="fa fa-hand-peace-o fa-2x" aria-hidden="true"></i></h1>
-            <article><p class="about-text">
 
-              I am a friendly, motivated and enthusiastic junior Front End Web Developer with an acute passion for online business. I have an excellent ability to keep up with the latest trends in web development and design. I am constantly committed to self-improvement and learning new skills. Impressive problem-solving aptitude completes my brilliant profile. I am proficient in working on my own initiative as well as in teams, and I have experience working quickly and under pressure. Thanks my Nanodegree I had the opportunity to  work on real project applying all my IT skiils. And now I've decided to make my own web-site to show to the World what are my abilities. Try to play with every box, each of them is a discovery!
+<h1 class="title"> About me <i class="fa fa-hand-peace-o fa-2x" aria-hidden="true"></i></h1>
+<img class="me" src="image/vanessa_profile.png" alt="me">
+
+            <article>
+
+              <p class="about-text">
+
+              I am a friendly, motivated and enthusiastic junior <strong>Front End Web Developer</strong> with an acute passion for online business. I have an excellent ability to keep up with the latest trends in <strong> Web development and design</strong>. I am constantly committed to self-improvement and learning new skills. Impressive problem-solving aptitude completes my brilliant profile. I am proficient in working on my own initiative as well as in teams, and I have experience working quickly and under pressure. Thanks <strong> my Nanodegree</strong> I had the opportunity to  work on real project applying all my IT skills. And now I've decided to make my own web-site to show to the World what are my abilities. <strong> Try to play with every box, each of them is a discovery</strong>!
             </p></article>
 
           </div>
@@ -164,9 +170,9 @@
   <div class="sum">
     <h1 class="title-skill"> Photoshop</h1>
     <h1 class="h2-skill"> Experience: 4 years</h1>
-    <h2 class="h2-skill"> Other similar software I know:<br /><br /> Sketch3, Adobe Photo Illustrator</h2>
+    <h2 id="photoshop" class="h2-skill"> Other similar software I know:<br /> Sketch3, Adobe Photo Illustrator</h2>
     <div class="level">
-      <h2 class="h2-level"> My level :</h2>
+      <h2 id="photoshop-level" class="h2-level"> My level :</h2>
              <i class="fa fa-star fa-4x " aria-hidden="true"></i>
              <i class="fa fa-star fa-4x " aria-hidden="true"></i>
              <i class="fa fa-star fa-4x " aria-hidden="true"></i>
@@ -176,7 +182,7 @@
 </li>
                   </ul>
             </div>
-            <h1 class="title">  &#9824 Give me a try! &#9827</h1>
+            <h1 class="title"> <i class="fa fa-heartbeat" aria-hidden="true"></i> Give me a try! <i class="fa fa-heartbeat" aria-hidden="true"></i></h1>
             <div class= "row" id="second-row">
                <div class= "col" id="first-col">
                   <a href="curriculum/curriculum.html#projects"><img id="portfolio" src="image/portfolio.png" alt="Portfolio image">
@@ -186,13 +192,13 @@
                   <img id="mockup" src="image/mockup_image.png" alt="Mockup image">
                   <span class="text-div">Mockup</span>
                </div>
-               <div class= "col" id="third-col">
+               <div class= "col contactMe" id="third-col">
                   <img id="contact" src="image/contactme.png" alt="Contact image">
                   <span class="text-div">Contact me</span>
 
                </div>
             </div>
-            <h1 class="title"> &#9834 Hobbies &#9834</h1>
+            <h1 class="title"> <i class="fa fa-bicycle" aria-hidden="true"></i> Hobbies <i class="fa fa-bicycle" aria-hidden="true"></i></h1>
             <div class= "row" id="container-tr">
 
               <section class= "col container-card">
@@ -207,7 +213,6 @@
               </div>
               </section>
 
-           <div class= "col" id="second-col">
              <section class= "col container-card">
                <div id="card2">
                  <figure class="front">
@@ -219,9 +224,9 @@
                </figure>
              </div>
             </section>
-</div>
 
-<div class= "col" id="third-col">
+
+
               <section class= "col container-card">
 
                 <div id="card3">
@@ -234,10 +239,35 @@
                  </figure>
                  </div>
                </section>
-            </div>
+
 
          </div>
       </div>
+
+          <div class="modal">
+                <i class="fa fa-times fa-4x" aria-hidden="true"></i>
+                  <div class="modal-cont">
+<!--FORM-->
+                    <div id="mainform">
+                    <h2>Do you want to contact me about hiring or future projects?</h2>
+                    <!-- Required Div Starts Here -->
+                    <form id="contactForm">
+                    <h3>Just fill the Contact Form</h3>
+                    <p id="returnmessage"></p>
+                    <label>Name: <span>*</span></label>
+                    <input type="text" id="name" placeholder="Name"/>
+                    <label>Email: <span>*</span></label>
+                    <input type="text" id="email" placeholder="Email"/>
+                    <label>Contact No: <span>*</span></label>
+                    <input type="text" id="phone" />
+                    <label>Message:</label>
+                    <textarea id="message" placeholder="Message......."></textarea>
+                    <input type="button" id="btnSubmit" value="Send Message"/>
+                    </form>
+                    </div>
+
+                  </div>
+          </div>
 
 
       <footer class="footer-container" id="footer">
@@ -263,7 +293,7 @@
              <a target="_blank" href="https://plus.google.com/u/0/+VanessaSangiorgio1988"><i class="fa fa-google-plus fa-3x" aria-hidden="true"></i></a>
              <a target="_blank" href="https://www.instagram.com/vane_sng"><i class="fa fa-instagram fa-3x" aria-hidden="true"></i></a>
              <a target="_blank" href="https://github.com/vanessa-sangiorgio"><i class="fa fa-github fa-3x" aria-hidden="true"></i></a>
-             <a href="#big-container"><i class="fa fa-hand-o-up fa-3x" aria-hidden="true"></i><br><br>Back to top </a>
+             <a href="#" class="backtotop"><i class="fa fa-hand-o-up fa-3x" aria-hidden="true"></i><br><br>Back to top </a>
 
 
         </div>
@@ -273,5 +303,8 @@
            <p>© 2016 VANESSA SANGIORGIO ALL RIGHTS RESERVED</p>
         </div>
       </footer>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+       <script src="js/script.js"></script>
+       <script src="js/contact_me.js"></script>
    </body>
 </html>
