@@ -1,5 +1,9 @@
 //function for chosing different player
-var makeChoice = prompt ("Please select your player: boy, cat-girl, horn-girl, pink-girl, princess-girl?");
+
+
+/*var makeChoice = prompt ("Who would you like to be Boy, Cat-girl, Horn-girl, Pink-girl, Princess-girl?").toLowerCase();*/
+
+var makeChoice = (document.getElementById('inputInsert').value).toLowerCase();
 
 
 function choicePlayer(makeYourChoice){
@@ -7,19 +11,19 @@ function choicePlayer(makeYourChoice){
   if (makeYourChoice==="boy"){
     choice = "images/char-boy.png";
   }
-  else if(makeYourChoice==="cat-girl"){
+  else if(makeYourChoice==="cat-girl"||makeYourChoice==="cat girl"){
     choice = "images/char-cat-girl.png";
   }
 
-  else if (makeYourChoice==="horn-girl"){
+  else if (makeYourChoice==="horn-girl"||makeYourChoice==="horn girl"){
       choice = "images/char-horn-girl.png";
   }
 
-  else if (makeYourChoice==="pink-girl"){
+  else if (makeYourChoice==="pink-girl"||makeYourChoice==="pink girl"){
     choice ="images/char-pink-girl.png";
   }
 
-  else if (makeYourChoice==="princess-girl"){
+  else if (makeYourChoice==="princess-girl"||makeYourChoice==="princess girl"){
     choice =  "images/char-princess-girl.png";
   }
   else {
@@ -73,6 +77,7 @@ var Player = function(x,y) {
     // a helper we've provided to easily load images
     this.x = x;
     this.y = y;
+    console.log(makeChoice)
     this.sprite = choicePlayer(makeChoice);
 };
 
@@ -94,7 +99,7 @@ Player.prototype.render = function() {
 
 // Draw the enemy on the screen, required method for game
 
-// Now instantiate your objects.
+// Now instantiate objects.
 // Place all enemy objects in an array called allEnemies
 
 var allEnemies = [new Enemy(300, 55.5), new Enemy(200, 135), new Enemy(300, 225), new Enemy(-400, 135)];
