@@ -455,7 +455,13 @@ footer.footer-container:after {
  border-style: solid;
  border-color: null white null null;
 }
-.fa-skype, .fa-envelope, .fa-sitemap{
+
+p#SkypeButton_Call_vanessa.sangiorgio_1 {
+  margin: 0;
+  color:black;
+}
+
+.fa-envelope, .fa-sitemap{
   color: white;
   padding: 2%;
   margin-left: 5%;
@@ -795,6 +801,10 @@ button {
   width:30%;
   height:50%;
 }
+.fa-sitemap{
+float: left;
+top:25px;
+}
 
   .fa-skype, .fa-envelope, .fa-sitemap{
     color: white;
@@ -886,7 +896,6 @@ button {
     overflow: hidden;
     margin: 1%;
     display: none;
-
   }
 
   .list-slides{
