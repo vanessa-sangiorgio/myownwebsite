@@ -24,19 +24,16 @@ a:active {
 /* SIDEBAR*/
 #sidebar {
   position: absolute;
-  left: 150px;
-  top: -120px ;
-  transition: top 0.7s ease-in-out;
-width: 100%;
-
+  top: 0;
+  width: 100%;
 }
 
 .menu {
-
   text-decoration: none;
   cursor: pointer;
   width: 100%;
   list-style: none;
+  margin-left:15%;
 }
 
 .menu > li{
@@ -45,7 +42,6 @@ width: 100%;
   display: inline-block;
   font-size: 20px;
   text-shadow: 1px 2px #691A99;
-  border-bottom: 2px solid deeppink;
   width:auto;
   margin-left:1%;
 }
@@ -53,57 +49,12 @@ width: 100%;
   border: none;
 }
 
-#sidebar.visible{
-  top: 0;
-}
-
-.sidebar-btn {
-  position: fixed;
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-  top:2%;
-  left: 2%;
-}
-
-.sidebar-btn > span {
-  display: block;
-  height:5px;
-  margin-bottom: 5px;
-  width: 35px;
-  height: 5px;
-  background-color: white;
-  margin: 6px 0;
-  transition: 0.4s;
-}
-
-.sidebar-btn > span:nth-child(2){
-  background-color: deeppink;
-}
-
-/* Rotate first bar */
-.change .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
-    transform: rotate(-45deg) translate(-9px, 6px) ;
-    background-color: deeppink;
-}
-
-/* Fade out the second bar */
-.change .bar2 {
-    opacity: 0;
-}
-
-/* Rotate last bar */
-.change .bar3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
-    transform: rotate(45deg) translate(-8px, -8px) ;
-}
-
 .sidebar-menu {
   text-align: center;
   font-weight: bold;
   width: 10%;
-  padding: 1%;
+  padding-left: 1%;
+  padding-right: 1%;
   display: inline-block;
   color: #f7f7f7;
 }
@@ -469,7 +420,7 @@ p#SkypeButton_Call_vanessa.sangiorgio_1 {
 
 .backtotop{
   display: inline-block;
-  margin-left: 250px;
+  margin-left: 15%;
 }
 
 .copyright {
@@ -509,23 +460,37 @@ main {
 #back-draw {
   display: none;
 }
-
-@media only screen and (max-width: 1000px) {
-
-  #sidebar {
-    font-size: 20px;
-
-  }
-
+@media only screen and (max-height: 650px) {
+header {
+  height: 130vh;
 }
-/** view < 750**/
+}
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-height: 500px) {
+header {
+  height: 150vh;
+}
+}
+
+@media only screen and (max-height: 400px) {
+header {
+  height: 250vh;
+}
+}
+@media only screen and (max-width: 950px) {
+
+.menu {
+  margin-left:10%;
+}
+}
+@media only screen and (max-width: 920px) {
+
+
 /* text hello main*/
 #hello {
-  font-size:26px;
+  font-size:40px;
   top:50%;
-  left:40%;
+  left:50%;
   transform:translate3d(-50%, -50%, 0);
 }
 
@@ -592,8 +557,11 @@ main {
 
 .sidebar-btn {
   position: fixed;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
-  left: auto;
+  top:2%;
+  left: 2%;
   z-index: 20;
   right:15px;
 }
@@ -601,9 +569,31 @@ main {
 .sidebar-btn > span {
   display: block;
   height:5px;
-  background-color: #fff;
   margin-bottom: 5px;
+  width: 35px;
+  height: 5px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.4s;
 }
+/* Rotate first bar */
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+    background-color: deeppink;
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+    opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-8px, -8px) ;
+}
+
 
 .sidebar-btn > span:nth-child(2){
   background-color: deeppink;
@@ -812,10 +802,10 @@ top:25px;
     margin-left: 5%;
   }
 
-  .backtotop{
+  .backtotop {
     width:20%;
     float:left;
-    margin-left:100px;
+    margin-left:10%;
   }
 
   .copyright {
@@ -877,12 +867,17 @@ top:25px;
 
   }
 
+  #front-text {
+  font-size: 20px;
+    left:10%;
+  }
+
   .col {
     height:130px;
   }
 
   .title {
-    font-size: 24px;
+    font-size: 20px;
   }
 
   /*slider*/
@@ -937,9 +932,6 @@ top:25px;
       background: #9B26AF}
 
     /*CARD*/
-
-
-
     .insert{
       width: 80%;
       padding: 0;
@@ -1011,7 +1003,6 @@ top:25px;
       margin-left: 0;
     }
 
-
     .menu {
       max-width: 55%;
     }
@@ -1034,5 +1025,9 @@ top:25px;
       word-spacing: 4px;
       margin-left: 20px;
       text-shadow: 1px 1px black;
+    }
+
+    .backtotop {
+          margin-left:0;
     }
 }
