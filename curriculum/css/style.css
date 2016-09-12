@@ -77,11 +77,9 @@ h5 {
 /* SIDEBAR*/
 #sidebar {
   position: absolute;
-  width:100%;
-  top: -120px;
-  transition: top 0.7s ease-in-out;
-  display: block;
-  margin-left: 10%;
+  top: 0;
+  width: 100%;
+  background: #fff;
 }
 .menu, .sidebar{
   text-decoration: none;
@@ -91,40 +89,17 @@ h5 {
 
 }
 .menu > li{
-  font-size: 16px;
-  text-shadow: 1px 2px #691A99;
-  margin-left: 1%;
-}
-#sidebar.visible{
-  top: 0;
-
-}
-.sidebar-btn {
-  position: absolute;
-  margin-top: 20px;
-  margin-left: 20px;
-  display: inline-block;
-  vertical-align: middle;
+  color: #f7f7f7;
   float: left;
-  width: 3%;
-  height: 3%;
-  border: 0.5px solid white;
-  cursor: pointer;
+  display: inline-block;
+  font-size: 20px;
+  width:auto;
+  margin-left:1%;
+
 }
 
-.sidebar-btn > span {
-  display: block;
-  height:5px;
-  background-color: #fff;
-  margin-bottom: 5px;
-}
-
-.sidebar-btn > span:nth-child(2){
-  background-color: deeppink;
-}
 .menu {
-  margin-top: 1%;
-  margin-right: 5%;
+  margin-left: 20%;
   width: 100%;
   position: relative;
   list-style: none;
@@ -397,7 +372,108 @@ main {
   .biopic {
     width: 175px;
   }
-}
+
+  /* SIDEBAR*/
+  #sidebar {
+    height:100%;
+    z-index: 10;
+    top: 0;
+    position: fixed;
+    left:0;
+    transform: translate3d(-100%,0,0);
+    transition: all 0.7s linear;
+    display: block;
+  }
+
+  .menu, #sidebar{
+    height: 100%;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .menu > li{
+    font-size: 20px;
+    text-shadow: 1px 2px #691A99;
+    display: block;
+    width: 100%;
+    height: 60px;
+    border: none;
+
+  }
+  #sidebar.visible{
+    transform: translate3d(0,0,0);
+  }
+
+  .sidebar-btn {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    top:2%;
+    left: 2%;
+    z-index: 20;
+    right:15px;
+  }
+
+  .sidebar-btn > span {
+    display: block;
+    height:5px;
+    margin-bottom: 5px;
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  /* Rotate first bar */
+  .change .bar1 {
+      -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+      transform: rotate(-45deg) translate(-9px, 6px) ;
+      background-color: deeppink;
+  }
+
+  /* Fade out the second bar */
+  .change .bar2 {
+      opacity: 0;
+  }
+
+  /* Rotate last bar */
+  .change .bar3 {
+      -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+      transform: rotate(45deg) translate(-8px, -8px) ;
+  }
+
+
+  .sidebar-btn > span:nth-child(2){
+    background-color: deeppink;
+  }
+
+  .menu {
+    height: 100%;
+    position: relative;
+    list-style: none;
+    background-color: #691A99;
+    padding-left: 0;
+    padding-right: 0;
+    margin:0;
+    max-width: 50%;
+  }
+
+  .sidebar-menu {
+    text-align: center;
+    font-weight: bold;
+    width: 25%;
+    display: inline-block;
+    color: #f7f7f7;
+  }
+
+  .sidebar-menu:hover {
+    background:#9B26AF;
+  }
+
+  .menu > li:nth-child(1){
+    background:none;
+  }
 
 @media only screen and (max-width: 750px) {
   #lets-connect {
