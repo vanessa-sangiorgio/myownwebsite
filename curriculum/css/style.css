@@ -86,8 +86,8 @@ h5 {
   margin: 0;
   padding:0;
   cursor: pointer;
-
 }
+
 .menu > li{
   color: #f7f7f7;
   float: left;
@@ -95,11 +95,9 @@ h5 {
   font-size: 20px;
   width:auto;
   margin-left:1%;
-
 }
 
 .menu {
-  margin-left: 20%;
   width: 100%;
   position: relative;
   list-style: none;
@@ -114,6 +112,10 @@ h5 {
   color: #f7f7f7;
 }
 
+.menu > li:nth-child(1){
+  margin-left: 20%;;
+  background:none;
+}
 
 #header > span {
   color:white;
@@ -208,7 +210,7 @@ a {
 #skills-h3 {
   color: deeppink;
   font-size: 30px;
-  margin-left: 400px;
+  margin-left: 20%;
 }
 
 .orange {
@@ -262,7 +264,7 @@ ul {
   float: left;
   padding: 10px;
   width: 200px;
-  display: none;
+
 }
 
 img {
@@ -311,15 +313,14 @@ float: left;
 padding: 2%;
 }
 .col1-footer {
-
-border-width: 0 0.5px 0 0;
+ border-width: 0 0.5px 0 0;
  border-style: solid;
  border-color: null white null null;
 }
 .fa-skype, .fa-envelope, .fa-sitemap{
   color: white;
   padding: 2%;
-  margin-left: 5%;
+  margin-left: 3%;
 }
 
 .copyright {
@@ -334,7 +335,7 @@ background: #691A99;
   display: flex;
 }
 .footer-img a{
-  padding: 2%;
+  padding: 1%;
   color: white;
 }
 .list-footer{
@@ -369,13 +370,16 @@ main {
 }
 
 @media only screen and (max-width:900px) {
-  .biopic {
-    width: 175px;
-  }
 
+
+  .menu > li:nth-child(1){
+    margin-top: 150px;
+    background:none;
+  }
   /* SIDEBAR*/
   #sidebar {
     height:100%;
+    width: 50%;
     z-index: 10;
     top: 0;
     position: fixed;
@@ -383,6 +387,7 @@ main {
     transform: translate3d(-100%,0,0);
     transition: all 0.7s linear;
     display: block;
+    margin-top: 0;
   }
 
   .menu, #sidebar{
@@ -398,8 +403,8 @@ main {
     width: 100%;
     height: 60px;
     border: none;
-
   }
+
   #sidebar.visible{
     transform: translate3d(0,0,0);
   }
@@ -409,18 +414,15 @@ main {
     width: 40px;
     height: 40px;
     cursor: pointer;
-    top:2%;
-    left: 2%;
+    top:1%;
+    left: 90%;
     z-index: 20;
     right:15px;
   }
 
   .sidebar-btn > span {
     display: block;
-    height:5px;
-    margin-bottom: 5px;
-    width: 35px;
-    height: 5px;
+    height: 1px;
     background-color: white;
     margin: 6px 0;
     transition: 0.4s;
@@ -452,12 +454,11 @@ main {
     height: 100%;
     position: relative;
     list-style: none;
-    background-color: #691A99;
+    background-color: #9B26AF;
     padding-left: 0;
     padding-right: 0;
     margin:0;
-    max-width: 50%;
-  }
+    }
 
   .sidebar-menu {
     text-align: center;
@@ -472,16 +473,43 @@ main {
   }
 
   .menu > li:nth-child(1){
+    margin-top: 150px;
     background:none;
+    margin-left: 0;
   }
 
 @media only screen and (max-width: 750px) {
+  .work-entry > a, .project-entry > a , education-entry > a {
+    font-size: 22px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.work-entry > p, .project-entry > p {
+  font-size: 14px;
+ text-shadow: none;
+ font-weight: bold;
+}
+#mapDiv > h2{
+margin-left: 0;
+}
+  #skills-h3 {
+    font-size: 18px;
+  }
+#workExperience > h2, #education > h2, #projects > h2 {
+  font-size: 22px;
+  margin-left: 0;
+}
+.education-entry > h3{
+  margin-top: 10px;
+  font-size: 20px;
+  margin-left: 0;
+}
+
   #lets-connect {
     margin-top: 10%;
   }
-  .biopic {
-    width: 150px;
-  }
+
   .welcome-message {
     display: none;
   }
@@ -489,19 +517,68 @@ main {
 
 #map {
   display: block;
-  height: 100%;
+  height: 90%;
   margin: 0 5%;
 }
 
 #mapDiv {
-  height: 400px;
+  height: 350px;
   width: 100%;
   padding-bottom: 10%;
+}
+
+a {
+  font-size: 16px;
+  text-decoration: none;
+  display: block;
 }
 
 @media only screen and (min-width: 750px) {
   #skills-h3,
   .biopic {
     display: block;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+
+    .work-entry > a, .project-entry > a , education-entry > a {
+      font-size: 18px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+  }
+footer > a {
+  font-size: 12px;
+}
+
+    #map {
+      height: 60%;
+      margin: 0 3%;
+    }
+
+    #mapDiv {
+      height: 300px;
+      width: 100%;
+      padding-bottom: 3%;
+    }
+
+
+
+a.backtotop{
+    font-size: 12px;
+margin-left: -100px;
+padding-left: 0;
+  }
+  .sidebar-btn {
+    left:80%;
+    top:0;
+  }
+
+  .biopic {
+    width: 120px;
+  }
+
+  .copyright > p{
+    font-size: 12px;
   }
 }
