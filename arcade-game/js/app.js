@@ -3,8 +3,8 @@
 
 /*var makeChoice = prompt ("Who would you like to be Boy, Cat-girl, Horn-girl, Pink-girl, Princess-girl?").toLowerCase();*/
 
-var makeChoice = (document.getElementById('inputInsert').value).toLowerCase();
-
+var makeChoice =
+ window.location.search.substring(1);
 
 function choicePlayer(makeYourChoice){
   var choice;
@@ -25,10 +25,12 @@ function choicePlayer(makeYourChoice){
 
   else if (makeYourChoice==="princess-girl"||makeYourChoice==="princess girl"){
     choice =  "images/char-princess-girl.png";
+
   }
   else {
       choice = "images/char-boy.png";
   }
+
   return choice;
 }
 
@@ -77,7 +79,6 @@ var Player = function(x,y) {
     // a helper we've provided to easily load images
     this.x = x;
     this.y = y;
-    console.log(makeChoice)
     this.sprite = choicePlayer(makeChoice);
 };
 
