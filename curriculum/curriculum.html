@@ -14,6 +14,7 @@ The <head> of a website generally links to important resources the page will
 need to load. You'll see a lot of <link>s to CSS files for styles and
 <scripts> for JavaScript files to build interactions.
 -->
+
 <head>
   <!-- This tells the browser how to read the document. -->
   <meta charset="utf-8">
@@ -39,7 +40,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   you can't accomplish with vanilla (regular) JavaScript.
   -->
   <script src="js/jQuery.js"></script>
-<script src="js/jQuery-code.js"></script>
+  <script src="js/jQuery-code.js"></script>
   <!-- More on helper.js in the class -->
   <script src="js/helper.js"></script>
 
@@ -47,10 +48,11 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   Uncomment the <script> tag below when you're ready to add an interactive
   Google Map to your resume!
   -->
-<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
+  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
 
   <meta name="viewport" content="width=device-width">
 </head>
+
 <body>
   <header>
     <div class="sidebar-btn">
@@ -58,19 +60,19 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
       <span class="bar2"></span>
       <span class="bar3"></span>
     </div>
-    <div id= "sidebar">
+    <div id="sidebar">
 
       <ul class="menu">
         <li class="sidebar-menu"><a href="../index.html#about"> About Me</a></li>
         <li class="sidebar-menu"><a href="../index.html#skill">Skills</a></li>
-        <li class="sidebar-menu"><a target="_blank" href="arcade-game/game.html">Game</a></li>
+        <li class="sidebar-menu"><a target="_blank" href="../arcade-game/pre-game.html">Game</a></li>
         <li class="sidebar-menu">Contact Me</li>
         <li class="sidebar-menu"><a href="../index.html#footer">Follow Me</a></li>
         <li class="sidebar-menu"><a target="_blank" href="../index.html">Home</a></li>
       </ul>
 
 
-      </div>
+    </div>
 
   </header>
   <div id="main">
@@ -154,35 +156,50 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   </script>
   <footer class="footer-container" id="#footer">
 
-       <div class="col1-footer">
+    <div class="col1-footer">
 
-         <h2> Contact me: </h2>
-         <ul class="list-footer">
-           <li><i class="fa fa-skype fa-2x" aria-hidden="true"></i> Cellulare </li>
-           <li><i class="fa fa-envelope fa-2x" aria-hidden="true"></i> E-mail</li>
-           <li><i class="fa fa-sitemap fa-2x" aria-hidden="true"></i>Site Map</li>
+      <h2> Contact me: </h2>
+      <ul class="list-footer">
+        <li class="list-contact">
+          <script type="text/javascript" src="https://secure.skypeassets.com/i/scom/js/skype-uri.js"></script>
+          <div id="SkypeButton_Call_vanessa.sangiorgio_1">
+            <script type="text/javascript">
+              Skype.ui({
+               "name": "dropdown",
+               "element": "SkypeButton_Call_vanessa.sangiorgio_1",
+               "participants": ["vanessa.sangiorgio"],
+               "imageColor": "white",
+               "imageSize": 32
+               });
+            </script>
+          </div>
+        </li>
+        <li class="list-contact"><i class="fa fa-envelope fa-3x" aria-hidden="true"></i> </li>
 
-         </ul>
 
-             </div>
+      </ul>
 
-       <div class="col2-footer">
-       <h2> Follow me: </h2>
-       <div class="footer-img">
-
-         <a target="_blank" href="https://twitter.com/VanessaSangi"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
-         <a target="_blank" href="https://www.linkedin.com/in/vanessasangiorgio"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
-         <a target="_blank" href="https://plus.google.com/u/0/+VanessaSangiorgio1988"><i class="fa fa-google-plus fa-2x" aria-hidden="true"></i></a>
-         <a target="_blank" href="https://www.instagram.com/vane_sng"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
-         <a target="_blank" href="https://github.com/vanessa-sangiorgio"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a>
-         <a href="#" class="backtotop"><i class="fa fa-hand-o-up fa-3x" aria-hidden="true"></i><br><br>Back to top </a>
 
     </div>
+
+    <div class="col2-footer">
+      <h2> Follow me: </h2>
+      <div class="footer-img">
+
+        <a target="_blank" href="https://twitter.com/VanessaSangi"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+        <a target="_blank" href="https://www.linkedin.com/in/vanessasangiorgio"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+        <a target="_blank" href="https://plus.google.com/u/0/+VanessaSangiorgio1988"><i class="fa fa-google-plus fa-2x" aria-hidden="true"></i></a>
+        <a target="_blank" href="https://www.instagram.com/vane_sng"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+        <a target="_blank" href="https://github.com/vanessa-sangiorgio"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a>
+        <a href="#" class="backtotop"><i class="fa fa-hand-o-up fa-3x" aria-hidden="true"></i><br><br>Back to top </a>
+
+      </div>
 
     </div>
     <div class="copyright">
-       <p>© 2016 VANESSA SANGIORGIO ALL RIGHTS RESERVED</p>
+      <p>© 2016 VANESSA SANGIORGIO ALL RIGHTS RESERVED</p>
     </div>
   </footer>
 </body>
+
 </html>
