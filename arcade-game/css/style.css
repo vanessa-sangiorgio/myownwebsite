@@ -1,18 +1,19 @@
 body {
-    text-align: center;
-
-}
-canvas{
-   position: relative;
-    top: 6em;
+  text-align: center;
 }
 
-html, body{
+canvas {
+  position: relative;
+  top: 6em;
+}
+
+html,
+body {
   font-family: 'Amaranth', sans-serif;
   margin: 0;
   padding: 0;
   width: 100%;
-  height:100%;
+  height: 100%;
 }
 
 a {
@@ -24,40 +25,74 @@ a:active {
   text-decoration: null;
   color: inherit;
 }
-#body-white{
 
+#body-int {
+  margin-top: 170px;
+}
+
+#body-white,
+#body-int {
   background: white;
   height: auto;
   width: 100%;
 }
-/* SIDEBAR*/
-#sidebar {
-  position: absolute;
-  font-size: 28px;
-  top: 0px ;
-  transition: top 0.7s ease-in-out;
-width: 100%;
-background: #9B26AF;
+
+#body-white {
+  top: 5%;
 }
 
-.menu {
-  text-decoration: none;
-  cursor: pointer;
+.block {
+  display: inline-block;
+}
+
+
+/* SIDEBAR*/
+
+#sidebar {
+  position: absolute;
+  font-size: 22px;
+  top: 0px;
   width: 100%;
+  background: #9B26AF;
+}
+
+.menu,
+.sidebar {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
   list-style: none;
 }
 
-.menu > li{
+.menu {
+  width: 100%;
+  position: relative;
+  list-style: none;
+}
+
+.sidebar-menu {
+  text-align: center;
+  font-weight: bold;
+  width: 10%;
+  padding: 1%;
+  display: inline-block;
+  color: #f7f7f7;
+}
+
+.menu > li {
   color: #f7f7f7;
   float: left;
   display: inline-block;
-  width:auto;
-  margin-left:1%;
+  width: auto;
+  margin-left: 1%;
 }
-.menu > li:hover{
+
+.menu > li:hover {
   background-color: #691A99;
 }
-.menu > li:nth-child(1){
+
+.menu > li:nth-child(1) {
   border: none;
 }
 
@@ -70,83 +105,115 @@ background: #9B26AF;
   color: #f7f7f7;
 }
 
+
+/*button*/
+
+button {
+  display: inline-block;
+  border-radius: 2px;
+  background-color: #9B26AF;
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 28px;
+  padding: 15px;
+  width: 150px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.createBy {
+  font-size: 12px;
+  margin-top: 5%;
+}
+
+
 /*footer*/
 
 footer.footer-container:after {
-    display: table;
-    clear: both;
-    content: '';
+  display: table;
+  clear: both;
+  content: '';
 }
 
 .footer-container {
-
   width: 100%;
-  margin-top: 15%;
+  margin-top: 8%;
   font-family: 'Roboto', sans-serif;
   background-color: #9B26AF;
   color: white;
 }
 
-
 #copyright {
-  color:white;
+  color: white;
   font-size: 16px;
   word-spacing: 10px;
   margin-left: 330px;
   text-shadow: 1px 1px black;
 }
-.col1-footer, .col2-footer {
+
+.col1-footer,
+.col2-footer {
   width: 45%;
   box-shadow: null;
   text-shadow: none;
   float: left;
   padding: 2%;
 }
+
 .col1-footer {
- border-width: 0 0.5px 0 0;
- border-style: solid;
- border-color: null white null null;
+  border-width: 0 0.5px 0 0;
+  border-style: solid;
+  border-color: null white null null;
 }
 
 p#SkypeButton_Call_vanessa.sangiorgio_1 {
   margin: 0;
-  color:black;
+  color: black;
 }
 
-.fa-envelope, .fa-sitemap{
+.fa-envelope,
+.fa-sitemap {
   color: white;
   padding: 2%;
   margin-left: 5%;
 }
 
-.backtotop{
+.backtotop {
   display: inline-block;
   margin-left: 250px;
 }
 
 .copyright {
-width: 100%;
-margin: 0;
-display: block;
-float: left;
-background: #691A99;
+  width: 100%;
+  margin: 0;
+  display: block;
+  float: left;
+  background: #691A99;
 }
 
 .footer-img {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
 }
-.footer-img a{
+
+.footer-img a {
   padding: 2%;
   color: white;
 }
-.list-footer{
+
+.list-footer {
   box-shadow: none;
   text-decoration: none;
   list-style: none;
   margin-top: 2%;
   padding-left: 0;
-  padding-right:0;
-  background: #9B26AF ;
+  padding-right: 0;
+  background: #9B26AF;
 }
 
 .fa-hand-o-up {
@@ -154,73 +221,93 @@ background: #691A99;
   margin-left: 20%;
 }
 
-
 @media only screen and (max-width: 800px) {
-
+  #body-int {
+    margin-top: 60px;
+  }
+  /* SIDEBAR*/
+  .menu > li:nth-child(1) {
+    margin-top: 150px;
+    background: none;
+  }
   /* SIDEBAR*/
   #sidebar {
-    height:100%;
+    height: 100%;
+    width: 50%;
     z-index: 10;
     top: 0;
     position: fixed;
-    left:0;
-    transform: translate3d(-100%,0,0);
+    left: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0);
+    -webkit-transition: all 0.7s linear;
     transition: all 0.7s linear;
     display: block;
+    margin-top: 0;
   }
-
-  .menu, #sidebar{
+  .menu,
+  #sidebar {
     height: 100%;
     text-decoration: none;
     cursor: pointer;
   }
-
-  .menu > li{
+  .menu > li {
     font-size: 20px;
     text-shadow: 1px 2px #691A99;
     display: block;
     width: 100%;
     height: 60px;
     border: none;
-
   }
-  #sidebar.visible{
-    transform: translate3d(0,0,0);
+  #sidebar.visible {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
   }
-
   .sidebar-btn {
-    width: 45px;
-    height: 45px;
     position: fixed;
+    width: 40px;
+    height: 40px;
     cursor: pointer;
-    left: auto;
+    top: 1%;
+    left: 85%;
     z-index: 20;
-    right:25px;
-    top: 25px;
+    right: 15px;
   }
-
   .sidebar-btn > span {
     display: block;
-    height:5px;
-    background-color: #9b26af;
-    margin-bottom: 5px;
+    height: 5px;
+    background-color: purple;
+    margin: 6px 0;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
   }
-
-  .sidebar-btn > span:nth-child(2){
+  /* Rotate first bar */
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
     background-color: deeppink;
   }
-
+  /* Fade out the second bar */
+  .change .bar2 {
+    opacity: 0;
+  }
+  /* Rotate last bar */
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+  }
+  .sidebar-btn > span:nth-child(2) {
+    background-color: deeppink;
+  }
   .menu {
     height: 100%;
     position: relative;
     list-style: none;
-    background-color: #691A99;
+    background-color: #9B26AF;
     padding-left: 0;
     padding-right: 0;
-    margin:0;
-    max-width: 50%;
+    margin: 0;
   }
-
   .sidebar-menu {
     text-align: center;
     font-weight: bold;
@@ -228,152 +315,141 @@ background: #691A99;
     display: inline-block;
     color: #f7f7f7;
   }
-
   .sidebar-menu:hover {
-    background:#9B26AF;
+    background: #9B26AF;
   }
-
-  .menu > li:nth-child(1){
-    background:none;
+  .menu > li:nth-child(1) {
+    margin-top: 150px;
+    background: none;
+    margin-left: 0;
   }
-
+  /**FOOTER**/
   footer.footer-container:after {
-      display: table;
-      clear: both;
-      content: '';
+    display: table;
+    clear: both;
+    content: '';
   }
-
   .footer-container {
     width: 100%;
     height: auto;
+    margin-top: 15%;
     font-family: 'Roboto', sans-serif;
     background-color: #9B26AF;
     color: white;
   }
-
   #copyright {
-    color:white;
+    color: white;
     font-size: 16px;
     word-spacing: 10px;
-    margin-left: 330px;
+    margin-left: 10px;
     text-shadow: 1px 1px black;
   }
-  .col1-footer, .col2-footer {
-    width: 100%;
-    height:50%;
+  .col1-footer,
+  .col2-footer {
+    width: 95%;
+    height: 50%;
     box-shadow: null;
     text-shadow: none;
     padding: 2%;
   }
-
   .col1-footer {
-   border-width: 0 0 0.5px 0;
-   border-style: solid;
-   border-color: null null white null;
+    border-width: 0 0 0.5px 0;
+    border-style: solid;
+    border-color: null null white null;
   }
-
-.list-contact{
-  float: left;
-  width:30%;
-  height:50%;
-}
-.fa-sitemap{
-float: left;
-top:25px;
-}
-
-  .fa-skype, .fa-envelope, .fa-sitemap{
+  .list-contact {
+    float: left;
+    width: 30%;
+    height: 50%;
+  }
+  .fa-sitemap {
+    float: left;
+    top: 25px;
+  }
+  .fa-skype,
+  .fa-envelope,
+  .fa-sitemap {
     color: white;
     padding: 2%;
-    margin-left: 5%;
+    margin-left: 2%;
   }
-
-  .backtotop{
-    width:20%;
-    float:left;
-    margin-left:100px;
+  .backtotop {
+    width: 20%;
+    float: left;
+    margin-left: 100px;
   }
-
   .copyright {
-  width: 100%;
-  margin: 0;
-  display: block;
-  float: left;
-  background: #691A99;
+    width: 100%;
+    margin: 0;
+    display: block;
+    float: left;
+    background: #691A99;
   }
-
   .footer-img {
-    width:70%;
+    width: 70%;
   }
-  .footer-img a{
+  .footer-img a {
     padding: 2%;
     color: white;
   }
-  .list-footer{
+  .list-footer {
     box-shadow: none;
     text-decoration: none;
     list-style: none;
     margin-top: 2%;
     padding-left: 0;
-    padding-right:0;
-    background: #9B26AF ;
+    padding-right: 0;
+    background: #9B26AF;
   }
-
   .fa-hand-o-up {
     margin-top: 10%;
-
   }
-
-
 }
 
-///
 @media only screen and (max-width: 450px) {
-
-/* SIDEBAR*/
-
-.fa-html5, .fa-css3{
-  color: white;
-font-size: 100px;
-  margin-left:20%;
-}
-#sidebar {
-      margin-left: -350px;
-}
-
-.menu > li{
-  font-size: 16px;
-  text-shadow: .5px 2px #691A99;
-  display: block;
-  width: 100%;
-  height: 50px;
- border: none;
-}
-#sidebar.visible{
-  margin-left: 0;
-}
-
-
-.menu {
-  max-width: 55%;
-}
-
-.sidebar-menu:hover {
-
-  background:#9B26AF;
-}
-/*footer*/
-
-.footer-container{
-  font-size: 10px;
-}
-
-#copyright{
-    color:white;
+  /* SIDEBAR*/
+  .fa-html5,
+  .fa-css3 {
+    color: white;
+    font-size: 100px;
+    margin-left: 20%;
+  }
+  #sidebar {
+    margin-left: -350px;
+  }
+  .menu > li {
+    font-size: 16px;
+    text-shadow: .5px 2px #691A99;
+    display: block;
+    width: 100%;
+    height: 50px;
+    border: none;
+  }
+  #sidebar.visible {
+    margin-left: 0;
+  }
+  .menu {
+    max-width: 55%;
+  }
+  .sidebar-menu:hover {
+    background: #9B26AF;
+  }
+  /*footer*/
+  .footer-container {
+    font-size: 10px;
+  }
+  #copyright {
+    color: white;
     font-size: 10px;
     word-spacing: 4px;
-    margin-left: 20px;
+    margin-left: 0;
     text-shadow: 1px 1px black;
   }
-
+  p#SkypeButton_Call_vanessa.sangiorgio_1 {
+    margin: 0;
+  }
+  .col1-footer,
+  .col2-footer {
+    width: 95%;
+  }
 }
