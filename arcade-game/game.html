@@ -26,22 +26,49 @@
 
       <ul class="menu">
         <li class="sidebar-menu"></li>
-        <li class="sidebar-menu"><a href="#about"><i class="fa fa-venus" aria-hidden="true"></i> About Me</a></li>
-        <li class="sidebar-menu"><a target="_blank" href="curriculum/curriculum.html"><i class="fa fa-sticky-note" aria-hidden="true"></i> Curriculum</a></li>
-        <li class="sidebar-menu"><a href="#skill"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Skills</a></li>
+        <li class="sidebar-menu"><a href="../index.html#about"><i class="fa fa-venus" aria-hidden="true"></i> About Me</a></li>
+        <li class="sidebar-menu"><a target="_blank" href="../curriculum/curriculum.html"><i class="fa fa-sticky-note" aria-hidden="true"></i> Curriculum</a></li>
+        <li class="sidebar-menu"><a href="../index.html#skill"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Skills</a></li>
 
-        <li class="sidebar-menu"><i class="fa fa-envelope-o" aria-hidden="true"></i> Contact Me</li>
+        <li class="sidebar-menu" id="contact"><i class="fa fa-envelope-o" aria-hidden="true"></i> Contact Me</li>
         <li class="sidebar-menu"><a href="#footer"><i class="fa fa-users" aria-hidden="true"></i> Follow Me</a></li>
         <li class="sidebar-menu"><a target="_blank" href="../index.html"><i class="fa fa-trophy" aria-hidden="true"></i> Home</a></li>
       </ul>
 
     </div>
   </header>
+  <div class="modal">
+    <i class="fa fa-times fa-4x" aria-hidden="true"></i>
+    <div class="modal-cont">
+      <!--FORM-->
+      <div id="mainform">
+        <h2 id="title-modal">Did you like my work? Let me know what you think about!</h2>
+        <!-- Required Div Starts Here -->
+        <form id="contactForm">
+          <h3 id="title-sub">Just one step! Fill in the Contact Form!</h3>
+          <p id="returnmessage"></p>
+          <label class="label">Name: <span>*</span></label>
+          <input type="text" id="name" placeholder="Name" />
+          <label class="label">Email: <span>*</span></label>
+          <input type="text" id="email" placeholder="Email" />
+          <label class="label">Contact No: <span>*</span></label>
+          <input type="text" id="phone" placeholder="+44......." />
+          <label class="label">Message:</label>
+          <textarea id="message" placeholder="Message......."></textarea>
+          <input type="button" id="btnSubmit" value="Send Message" />
+        </form>
+      </div>
+
+    </div>
+  </div>
+
   <div id="body-white">
     <script type="text/JavaScript">
       var music = new Audio('audio/chinese-gong.mp3'); music.play();
     </script>
+    <h3 id="Message-Apologize"> This game is only available for screen bigger than 550 px so far. I'm sorry for any inconvenience. Work in progress!</h3>
   </div>
+
   <footer class="footer-container" id="footer">
 
     <div class="col1-footer">
@@ -88,7 +115,7 @@
   <script src="js/engine.js"></script>
   <script src="js/jQuery.js"></script>
   <script src="js/jQuery-code.js"></script>
-
+  <script src="../js/contact_me.js"></script>
 </body>
 
 </html>
