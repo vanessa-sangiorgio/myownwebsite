@@ -4,9 +4,9 @@ $(document).ready(function(){
    $("#sidebar").toggleClass("visible");
  });
 
-/*$("#skill").click(function(){
-  $("#div-skill").toggleClass("showing");
-});*/
+ $(".sidebar-btn").click(function(){
+   $(".sidebar-btn").toggleClass("change");
+ });
 
 $("#skill").click(function(){
 $("#skill-slider").slideToggle("slow");
@@ -21,7 +21,11 @@ $("#environment").click(function(){
 });
 
 $("#drawing").click(function(){
-  $("#card3").toggleClass("flipped");
+  $(".modal-drawing").addClass("isactive");
+});
+
+$(".fa-times").click(function(){
+  $(".modal-drawing").removeClass("isactive");
 });
 
 //SLIDER SKILLS
@@ -61,4 +65,66 @@ $(".prev").click(function() {
   cycleItems();
 });
 
+});
+
+//MODAL
+
+$(".contactMe").click(function() {
+  $(".modal").addClass("isactive");
+});
+
+$("#contact").click(function() {
+  $(".modal").addClass("isactive");
+});
+
+$(".fa-envelope").click(function() {
+  $(".modal").addClass("isactive");
+});
+
+$(".fa-times").click(function() {
+  $(".modal").removeClass("isactive");
+});
+
+$("#mockup").click(function() {
+  $(".modal-mockup").addClass("isactive");
+});
+
+$("#exit").click(function() {
+  $(".modal-mockup").removeClass("isactive");
+});
+
+$(".backtotop").click(function(event){
+  event.preventDefault();
+  $("html, body").animate({
+    scrollTop:0
+  }, 800);
+});
+
+
+//FORM//
+$(document).ready(function() {
+  $("#submit").click(function() {
+    var name = $("#name").val();
+    var email = $("#email").val();
+    var message = $("#message").val();
+    var contact = $("#contact").val();
+    $("#returnmessage").empty(); // To empty previous error/success message.
+    // Checking for blank fields.
+    // if (name == '' || email == '' || contact == '') {
+    // alert("Please Fill Required Fields");
+    // } else {
+    // Returns successful data submission message when the entered information is stored in database.
+      $.post("/js/contact_form.php", {
+        name1: name,
+        email1: email,
+        message1: message,
+        contact1: contact
+      }, function(data) {
+        $("#returnmessage").append(data); // Append returned message to message paragraph.
+        if (data == "Your Query has been received, We will contact you soon.") {
+          $("#form")[0].reset(); // To reset form fields on success.
+        }
+      });
+    // }
+  });
 });
