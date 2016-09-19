@@ -29,6 +29,9 @@ a:active {
 #body-int {
   margin-top: 170px;
 }
+#Message-Apologize {
+  display: none;
+}
 
 #body-white,
 #body-int {
@@ -129,6 +132,118 @@ button {
   margin-top: 5%;
 }
 
+/*MODAL*/
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(221, 202, 218, 0.9);
+  z-index: 1;
+}
+
+.modal.isactive {
+  display: block;
+}
+
+.modal-cont {
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+          transform: translate3d(-50%, -50%, 0);
+}
+
+.fa-exclamation, .fa-check {
+  color: #68efad;
+  font-size: 20px;
+  padding: 3px;
+}
+
+#mainform {
+  padding: 2%;
+  background-color: #9b26af;
+}
+
+#title-sub {
+  color: white;
+  font-weight: 500;
+}
+
+.fa-times {
+  display: block;
+  color: #9b26af;
+  -webkit-transform: translate3d(-45%, 20%, 0);
+          transform: translate3d(-45%, 20%, 0);
+  cursor: pointer;
+}
+
+#returnmessage {
+  color: white;
+  font-weight: 100;
+}
+
+#title-modal {
+  color: white;
+}
+
+#message {
+  border: none;
+  width: 90%;
+  margin-top: 2px;
+  height: 4.5em;
+  padding: .5em;
+}
+
+.label,
+input {
+  height: 1.5em;
+  border: none;
+  width: 90%;
+}
+
+input {
+  margin-bottom: .5em;
+  padding: .5em;
+}
+
+.label {
+  display: inline-flex;
+  color: white;
+  }
+
+input#btnSubmit {
+  display: inline-block;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 2px;
+  background-color: #691A99;
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 14px;
+  padding: 15px;
+  height: auto;
+  width: 150px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate3d(15%, 20%, 0);
+          transform: translate3d(15%, 20%, 0);
+}
+
+#modal-cont {
+  height: 35em;
+}
+
 
 /*footer*/
 
@@ -179,6 +294,7 @@ p#SkypeButton_Call_vanessa.sangiorgio_1 {
   color: white;
   padding: 2%;
   margin-left: 5%;
+  cursor:pointer;
 }
 
 .backtotop {
@@ -406,7 +522,59 @@ p#SkypeButton_Call_vanessa.sangiorgio_1 {
   }
 }
 
+@media only screen and (max-width: 550px) {
+canvas {display: none;}
+
+#Message-Apologize{
+    display: block;
+    top: 100px;
+    margin-top: 100px;
+    color: #800080
+}
+}
+
 @media only screen and (max-width: 450px) {
+  /*modal*/
+  /*modal contact form*/
+  #mainform{
+    padding: 3%;
+  }
+.modal-cont{
+  width: 80%;
+  transform: translate3d(-43%, -52%, 0);
+}
+  #title-modal{
+    font-size: 18px;
+  }
+
+  #title-sub {
+    font-size:14px;
+  }
+
+  .fa-times {
+    font-size: 28px;
+    -webkit-transform: translate3d(-40%, 160%, 0);
+            transform: translate3d(-40%, 160%, 0);
+  }
+input#btnSubmit {
+      transform: translate3d(36%, 19%, 0);
+      width:120px;
+  }
+
+  .modal-indraw {
+    height: 70%;
+    width: 86%;
+    transform: translate3d(-44%, -50%, 0);
+  }
+  div.desc {
+    height: 27%;
+    font-size: 12px;
+  }
+  .title-draw {
+    font-size: 14px;
+  }
+
+
   /* SIDEBAR*/
   .fa-html5,
   .fa-css3 {
