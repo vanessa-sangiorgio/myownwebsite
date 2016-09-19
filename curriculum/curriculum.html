@@ -66,7 +66,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
         <li class="sidebar-menu"><a href="../index.html#about"> About Me</a></li>
         <li class="sidebar-menu"><a href="../index.html#skill">Skills</a></li>
         <li class="sidebar-menu"><a target="_blank" href="../arcade-game/pre-game.html">Game</a></li>
-        <li class="sidebar-menu">Contact Me</li>
+        <li class="sidebar-menu" id="contact">Contact Me</li>
         <li class="sidebar-menu"><a href="../index.html#footer">Follow Me</a></li>
         <li class="sidebar-menu"><a target="_blank" href="../index.html">Home</a></li>
       </ul>
@@ -154,6 +154,31 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
       document.getElementById('mapDiv').style.display = 'none';
     }
   </script>
+  <div class="modal">
+    <i class="fa fa-times fa-4x" aria-hidden="true"></i>
+    <div class="modal-cont">
+      <!--FORM-->
+      <div id="mainform">
+        <h2 id="title-modal">Did you like my work? Let me know what you think about!</h2>
+        <!-- Required Div Starts Here -->
+        <form id="contactForm">
+          <h3 id="title-sub">Just one step! Fill in the Contact Form!</h3>
+          <p id="returnmessage"></p>
+          <label class="label">Name: <span>*</span></label>
+          <input type="text" id="name" placeholder="Name" />
+          <label class="label">Email: <span>*</span></label>
+          <input type="text" id="email" placeholder="Email" />
+          <label class="label">Contact No: <span>*</span></label>
+          <input type="text" id="phone" placeholder="+44......." />
+          <label class="label">Message:</label>
+          <textarea id="message" placeholder="Message......."></textarea>
+          <input type="button" id="btnSubmit" value="Send Message" />
+        </form>
+      </div>
+
+    </div>
+  </div>
+
   <footer class="footer-container" id="#footer">
 
     <div class="col1-footer">
