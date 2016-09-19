@@ -432,7 +432,7 @@ button {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, .7);
+  background: rgba(221, 202, 218, 0.9);
   z-index: 1;
 }
 
@@ -462,7 +462,7 @@ button {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, .7);
+  background: rgba(221, 202, 218, 0.9);
   z-index: 1;
 }
 
@@ -479,7 +479,7 @@ button {
           transform: translate3d(-50%, -50%, 0);
 }
 
-.fa-exclamation {
+.fa-exclamation, .fa-check {
   color: #68efad;
   font-size: 20px;
   padding: 3px;
@@ -496,7 +496,7 @@ button {
 }
 
 .fa-times {
-  color: #68efad;
+  color: #9b26af;
   -webkit-transform: translate3d(100%, 37%, 0);
           transform: translate3d(100%, 37%, 0);
   cursor: pointer;
@@ -539,6 +539,9 @@ input {
 
 input#btnSubmit {
   display: inline-block;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   border-radius: 2px;
   background-color: #691A99;
   border: none;
@@ -571,7 +574,7 @@ input#btnSubmit {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, .7);
+  background: rgba(221, 202, 218, 0.9);
   z-index: 1;
 }
 
@@ -603,7 +606,7 @@ input#btnSubmit {
   width: 100%;
   height: 45%;
   margin-top: 2%;
-  margin-left: 2%;
+  margin-left: 5%;
 }
 
 .title-draw {
@@ -631,6 +634,15 @@ div.desc {
 
 
 /* FOOTER*/
+
+#copyright-btn {
+  margin: 1%;
+  margin-bottom: 0;
+}
+
+.text-copyright {
+  margin-left: 2%;
+}
 
 footer.footer-container:after {
   display: table;
@@ -1040,9 +1052,9 @@ main {
     top: 25px;
   }
   .fa-skype,
-  .fa-envelope,
-  .fa-sitemap {
-    color: white;
+  .fa-envelope {
+    cursor: pointer;
+        color: white;
     padding: 2%;
     margin-left: 5%;
   }
@@ -1097,7 +1109,7 @@ main {
 
 @media only screen and (max-width: 800px) {
   .fa-times {
-    color: #68efad;
+    color: #9b26af;
     -webkit-transform: translate3d(10%, 73%, 0);
             transform: translate3d(10%, 73%, 0);
     cursor: pointer;
@@ -1154,9 +1166,34 @@ main {
 }
 
 @media only screen and (max-width: 450px) {
+  .modal-ins {
+    height: 95%;
+}
+
+  /*modal contact form*/
+  #mainform{
+    padding: 3%;
+  }
+.modal-cont{
+  width: 80%;
+transform: translate3d(-43%, -52%, 0);
+}
+  #title-modal{
+    font-size: 18px;
+  }
+
+  #title-sub {
+    font-size:14px;
+  }
+input#btnSubmit {
+      transform: translate3d(36%, 19%, 0);
+
+width:120px;}
+
   .modal-indraw {
     height: 70%;
-    width: 90%;
+    width: 86%;
+    transform: translate3d(-44%, -50%, 0);
   }
   div.desc {
     height: 27%;
@@ -1169,6 +1206,10 @@ main {
     font-size: 32px;
     -webkit-transform: translate3d(50%, 180%, 0);
             transform: translate3d(50%, 180%, 0);
+  }
+
+  .col .text-div{
+    font-size: 18px;
   }
   .me {
     padding: 2%;
@@ -1306,6 +1347,7 @@ main {
   /*footer*/
   .footer-container {
     font-size: 10px;
+    margin-top: -16%;
   }
   #copyright {
     color: white;
@@ -1316,5 +1358,22 @@ main {
   }
   .backtotop {
     margin-left: 0;
+  }
+}
+
+/* only firefox*/
+@-moz-document url-prefix() {
+  .menu {
+     margin-left:-30%;
+  }
+}
+/*internet explorer 10 - 11*/
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .menu {
+     margin-left:-35%;
+  }
+
+  .col img {
+    border: none;
   }
 }
