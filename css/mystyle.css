@@ -492,7 +492,7 @@ button {
 }
 
 #mainform {
-  padding: 5%;
+  padding: 3%;
   background-color: #9b26af;
 }
 
@@ -562,8 +562,8 @@ input#btnSubmit {
   margin: 5px;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate3d(140%, 50%, 0);
-          transform: translate3d(140%, 50%, 0);
+  -webkit-transform: translate3d(140%, 0, 0);
+          transform: translate3d(140%, 0, 0);
 }
 
 #modal-cont {
