@@ -305,6 +305,11 @@ article {
 
 
 /*DIV FOR SLIDER SKILLS*/
+#jquery-image{
+  width: 100%;
+height: 75%;
+}
+
 
 #skill-slider {
   width: 94%;
