@@ -6,7 +6,7 @@ $(function() {
     var phone = $("input#phone").val();
     var message = $("textarea#message").val();
     $.ajax({
-        url: "http://francescoalbanese.altervista.org/contact_me.php",
+        url: "../mail/contact_me.php",
         type: "POST",
         //contentType: false,
         //processData: false,
