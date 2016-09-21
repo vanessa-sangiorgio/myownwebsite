@@ -8,6 +8,7 @@ $(function() {
     $.ajax({
         url: "http://francescoalbanese.altervista.org/contact_me.php",
         type: "POST",
+        crossOrigin: true,
         crossDomain: true,
         //contentType: false,
         //processData: false,
